@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "cairo";
+  src: url("../fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: lighter; }
+* {
+  font-family: cairo, sans-serif; }
+
+* {
+  direction: rtl;
+  color: #2b2b2b; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.flex {
+  display: flex; }
+
+.col {
+  flex-direction: column; }
+
+.wrap {
+  flex-wrap: wrap; }
+
+.center {
+  justify-content: center; }
+
+.space-between {
+  justify-content: space-between; }
+
+.align {
+  align-items: center; }
+
+.padding {
+  padding: 0 2%; }
+
+header {
+  height: 45px;
+  background-color: #305069; }
+  header .search input {
+    background: none;
+    border: none; }
+
+main {
+  padding: 0 0 0 1%;
+  min-height: calc(100vh - 90px); }
+  main nav {
+    background-color: #fcfcfc;
+    border: 1px solid #efefef; }
+    main nav ul li {
+      border-bottom: 1px solid #efefef;
+      padding: 0 20px; }
+      main nav ul li.active {
+        background-color: #f2f2f2; }
+  main .content {
+    padding: 0 2%;
+    flex-grow: 1; }
+    main .content table.dataTable.no-footer {
+      border: none; }
+
+footer {
+  height: 45px;
+  background-color: #efefef; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,194 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wasl</title>
+    <link
+      rel="stylesheet"
+      href="css/main.css
+  "
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
+    />
+  </head>
+  <body>
+    <header class="flex space-between align padding">
+      <div>
+        <img src="" alt="logo" />
+        <img src="./imgs/open-menu-16@2x.png" alt="menu" />
+      </div>
+      <div class="search">
+        <img src="" alt="" />
+        <button></button>
+        <input type="text" name="search" id="searchbar" />
+      </div>
+    </header>
+    <main class="flex">
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="index.html"
+              ><img src="imgs/home-17@2x.png" alt="home page" />الرئيسية</a
+            >
+          </li>
+          <li>
+            <a href="join-request.html"
+              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
+              الانضمام</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
+              الاستشارة</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات التوثيق</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات المأذون</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
+              المحاماه</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
+              العضويات</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />التقييمات</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />الشاكوي</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات الدعم
+              الفني</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="imgs/home-17@2x.png" alt="home page" />العمولة</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="content">
+        <h1>طلبات الانضمام</h1>
+
+        <div class="filter"></div>
+        <table id="example" class="display" style="width: 100%">
+          <thead>
+            <tr>
+              <th>رقم الطلب</th>
+              <th>التاريخ</th>
+              <th>الاسم</th>
+              <th>رقم الجوال</th>
+              <th>الخدمة</th>
+              <th>المنطقة</th>
+              <th>المرفقات</th>
+              <th>اجراء</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="direction: ltr">#UB9705</td>
+              <td>August 05 2020 10:29pm</td>
+              <td>شروق أشرف</td>
+              <td style="direction: ltr">+966 214541478</td>
+              <td>محامي</td>
+              <td>السعودية</td>
+              <td><a href="">doc1</a></td>
+              <td><button>قبول</button> <button>رفض</button></td>
+            </tr>
+            <tr>
+              <td style="direction: ltr">#UB9705</td>
+              <td>August 05 2020 10:29pm</td>
+              <td>شروق أشرف</td>
+              <td style="direction: ltr">+966 214541478</td>
+              <td>مأذون</td>
+              <td>السعودية</td>
+              <td><a href="">doc1</a></td>
+              <td><button>قبول</button> <button>رفض</button></td>
+            </tr>
+            <tr>
+              <td style="direction: ltr">#UB9705</td>
+              <td>August 05 2020 10:29pm</td>
+              <td>أحمد</td>
+              <td style="direction: ltr">+966 214541478</td>
+              <td>محامي</td>
+              <td>السعودية</td>
+              <td><a href="">doc1</a></td>
+              <td><button>قبول</button> <button>رفض</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="flex space-between align padding">
+      <ul class="flex">
+        <li><a href="">من نحن</a></li>
+        <li><a href="">المساعدة</a></li>
+        <li><a href="">اتصل بنا</a></li>
+      </ul>
+      <p>جميع الحقوق محفوظة - وصل</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+
+        
+        $("#example").DataTable({
+          paging: false,
+          info: false,
+          initComplete: function () {
+            var column = this.api().column(4);
+            var select = $(
+              '<select><option value="" >الخدمة</option></select>'
+            ).on("change", function () {
+              console.log(this);
+
+              var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+              column.search(val ? "^" + val + "$" : "", true, false).draw();
+            });
+            $("#example_filter").after(select);
+            column
+              .data()
+              .unique()
+              .sort()
+              .each(function (d, j) {
+                select.append('<option value="' + d + '">' + d + "</option>");
+              });
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
