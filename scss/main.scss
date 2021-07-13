@@ -146,7 +146,7 @@ header {
       z-index: 5;
       ul {
         flex-direction: column;
-        
+
         li {
           border-bottom: 1px solid $lightgrey;
           padding: 10px;
@@ -175,24 +175,51 @@ main {
       width: 50%;
       margin: 0 auto;
       text-align: center;
+      @media (max-width: 1100px) {
+        width: 65%;
+      }
+      @media (max-width: 850px) {
+        width: 80%;
+      }
 
       h1 {
         font-size: 24px;
         margin: 0 100px;
         font-weight: 100;
+        transition: all 2s;
+        @media (max-width: 700px) {
+          font-size: 20px;
+          margin: 0 60px;
+        }
       }
       p {
         font-family: Andalus, sans-serif;
         font-size: 50px;
         color: white;
+        span {
+          font-family: Andalus, sans-serif;
+          @media (max-width: 425px) {
+            display: block;
+          }
+        }
+        @media (max-width: 700px) {
+          font-size: 40px;
+        }
+        @media (max-width: 580px) {
+          font-size: 30px;
+        }
       }
       a {
         color: white;
         margin: 0 50px;
         text-align: center;
+        @media (max-width: 700px) {
+          font-size: 14px;
+          margin: 0 30px;
+        }
       }
       button {
-        margin-top: 30px;
+        margin-top: 60px;
         height: 60px;
         background-color: $darkblue;
         color: white;
@@ -202,6 +229,11 @@ main {
         border: 3px solid white;
         border-radius: 5px;
         cursor: pointer;
+        @media (max-width: 600px) {
+          font-size: 14px;
+          padding: 15px 50px;
+
+        }
       }
       .border {
         border-top: 1px solid white;

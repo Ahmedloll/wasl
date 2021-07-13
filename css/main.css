@@ -131,20 +131,46 @@ main .banner {
     width: 50%;
     margin: 0 auto;
     text-align: center; }
+    @media (max-width: 1100px) {
+      main .banner .container {
+        width: 65%; } }
+    @media (max-width: 850px) {
+      main .banner .container {
+        width: 80%; } }
     main .banner .container h1 {
       font-size: 24px;
       margin: 0 100px;
-      font-weight: 100; }
+      font-weight: 100;
+      transition: all 2s; }
+      @media (max-width: 700px) {
+        main .banner .container h1 {
+          font-size: 20px;
+          margin: 0 60px; } }
     main .banner .container p {
       font-family: Andalus, sans-serif;
       font-size: 50px;
       color: white; }
+      main .banner .container p span {
+        font-family: Andalus, sans-serif; }
+        @media (max-width: 425px) {
+          main .banner .container p span {
+            display: block; } }
+      @media (max-width: 700px) {
+        main .banner .container p {
+          font-size: 40px; } }
+      @media (max-width: 580px) {
+        main .banner .container p {
+          font-size: 30px; } }
     main .banner .container a {
       color: white;
       margin: 0 50px;
       text-align: center; }
+      @media (max-width: 700px) {
+        main .banner .container a {
+          font-size: 14px;
+          margin: 0 30px; } }
     main .banner .container button {
-      margin-top: 30px;
+      margin-top: 60px;
       height: 60px;
       background-color: #305069;
       color: white;
@@ -154,6 +180,10 @@ main .banner {
       border: 3px solid white;
       border-radius: 5px;
       cursor: pointer; }
+      @media (max-width: 600px) {
+        main .banner .container button {
+          font-size: 14px;
+          padding: 15px 50px; } }
     main .banner .container .border {
       border-top: 1px solid white;
       height: 2px;
