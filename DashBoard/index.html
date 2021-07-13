@@ -90,7 +90,7 @@
       </nav>
       <div class="content">
         <h1>الرئيسية</h1>
-        <div class="flex space-between statistics">
+        <div class="flex space-between wrap statistics">
           <div class="flex space-between align statistic-card">
             <div>
               <span>1025</span>
@@ -120,14 +120,61 @@
             <img src="imgs/meeting@2x.png" alt="" />
           </div>
         </div>
-        <div class="flex space-between charts">
-          <div class="doughnut">
+        <div class="flex space-between wrap charts">
+          <div class="doughnut flex col">
             <h2>احصائيات</h2>
             <canvas id="myChart"></canvas>
             <p>احصائيات المستخدمين</p>
             <span>178.00$</span>
+            <div class="flex space-between">
+              <div class="statistic">
+                <span>اليوم</span>
+                <div>
+                  <span>152.00$ </span>
+                  <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+              <div class="statistic">
+                <span>اليوم</span>
+                <div>
+                  <span>152.00$ </span>
+                  <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+              <div class="statistic">
+                <span>اليوم</span>
+                <div>
+                  <span>152.00$ </span>
+                  <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="line">
+          <div class="line flex col">
+            <h2>عدد المستخدمين</h2>
+            <div class="flex space-between">
+              <div class="statistic">
+                <span>اليوم</span>
+                <div>
+                  <span>152.00$ </span>
+                  <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+              <div class="statistic">
+                <span>اليوم</span>
+                <div>
+                  <span>152.00$ </span>
+                  <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+              <div class="statistic">
+                <span>اليوم</span>
+                <div>
+                  <span>152.00$ </span>
+                  <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+            </div>
             <canvas id="myChart2"></canvas>
           </div>
         </div>
@@ -402,6 +449,20 @@
             y: {
               beginAtZero: true,
             },
+            xAxes: [
+              {
+                gridLines: {
+                  display: false,
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: false,
+                },
+              },
+            ],
           },
           plugins: {
             datalabels: {
