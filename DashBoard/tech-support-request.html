@@ -40,22 +40,26 @@
               ><img src="imgs/home-17@2x.png" alt="home page" />الرئيسية</a
             >
           </li>
-          <li class="active">
+          <li>
             <a href="join-request.html"
-              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
+              ><img src="imgs/home-17@2x.png" alt="join-request page" />طلبات
               الانضمام</a
             >
           </li>
           <li>
             <a href="consultant-request.html"
-              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
-              الاستشارة</a
+              ><img
+                src="imgs/home-17@2x.png"
+                alt="consultant-request page"
+              />طلبات الاستشارة</a
             >
           </li>
-          <li></li>
           <li>
             <a href="documentation-request.html"
-              ><img src="imgs/home-17@2x.png" alt="home page" />طلبات التوثيق</a
+              ><img
+                src="imgs/home-17@2x.png"
+                alt="documentation-request page"
+              />طلبات التوثيق</a
             >
           </li>
           <li>
@@ -85,7 +89,7 @@
               ><img src="imgs/home-17@2x.png" alt="home page" />الشكاوى</a
             >
           </li>
-          <li>
+          <li class="active">
             <a href="tech-support-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات الدعم
               الفني</a
@@ -99,33 +103,38 @@
         </ul>
       </nav>
       <div class="content">
-        <h1>طلبات الانضمام</h1>
-        <div class="table-container join-request">
+        <h1>طلبات الدعم الفني</h1>
+        <div class="table-container">
           <table id="example" class="display" style="width: 100%">
             <thead>
               <tr>
-                <th>رقم الطلب</th>
                 <th>التاريخ</th>
-                <th>الاسم</th>
-                <th>رقم الجوال</th>
-                <th>الخدمة</th>
-                <th>المنطقة</th>
-                <th>المرفقات</th>
-                <th>اجراء</th>
+                <th>اسم المستخدم</th>
+                <th>عنوان الرسالة</th>
+                <th>الرسالة</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="id ltr">#UB9705</td>
                 <td>August 05 2020 10:29pm</td>
                 <td>شروق أشرف</td>
-                <td class="ltr">+966 214541478</td>
-                <td>محامي</td>
-                <td>السعودية</td>
-                <td class="attachment"><a href="">doc1</a></td>
                 <td>
-                  <button class="accept">قبول</button>
-                  <button class="decline">رفض</button>
+                  <!-- <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p> -->
+                  <p>هذا النص هو مثال لنص يمكن</p>
+                </td>
+                <td>
+                  <!-- <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p> -->
+                  <p>هذا النص هو مثال لنص يمكن</p>
                 </td>
               </tr>
             </tbody>
@@ -168,7 +177,7 @@
             searchPlaceholder: "بحث",
           },
           initComplete: function () {
-            var column1 = this.api().column(1);
+            var column1 = this.api().column(0);
             var select1 = $(
               '<select><option value="" >التاريخ</option></select>'
             ).on("change", function () {
@@ -183,22 +192,6 @@
               .sort()
               .each(function (d, j) {
                 select1.append('<option value="' + d + '">' + d + "</option>");
-              });
-            var column2 = this.api().column(4);
-            var select2 = $(
-              '<select><option value="" >الخدمة</option></select>'
-            ).on("change", function () {
-              var val2 = $.fn.dataTable.util.escapeRegex($(this).val());
-
-              column2.search(val2 ? "^" + val2 + "$" : "", true, false).draw();
-            });
-            $("#example_filter label").after(select2);
-            column2
-              .data()
-              .unique()
-              .sort()
-              .each(function (d, j) {
-                select2.append('<option value="' + d + '">' + d + "</option>");
               });
           },
         });

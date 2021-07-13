@@ -40,7 +40,7 @@
               ><img src="imgs/home-17@2x.png" alt="home page" />الرئيسية</a
             >
           </li>
-          <li class="active">
+          <li>
             <a href="join-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
               الانضمام</a
@@ -91,7 +91,7 @@
               الفني</a
             >
           </li>
-          <li>
+          <li class="active">
             <a href="commision.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />العمولة</a
             >
@@ -99,33 +99,26 @@
         </ul>
       </nav>
       <div class="content">
-        <h1>طلبات الانضمام</h1>
-        <div class="table-container join-request">
+        <h1>نسبة العمولة</h1>
+        <div class="table-container">
           <table id="example" class="display" style="width: 100%">
             <thead>
               <tr>
-                <th>رقم الطلب</th>
-                <th>التاريخ</th>
-                <th>الاسم</th>
-                <th>رقم الجوال</th>
+                <th>اسم المستخدم</th>
                 <th>الخدمة</th>
-                <th>المنطقة</th>
-                <th>المرفقات</th>
+                <th>التقييم</th>
+                <th>العمولة</th>
                 <th>اجراء</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="id ltr">#UB9705</td>
-                <td>August 05 2020 10:29pm</td>
                 <td>شروق أشرف</td>
-                <td class="ltr">+966 214541478</td>
                 <td>محامي</td>
-                <td>السعودية</td>
-                <td class="attachment"><a href="">doc1</a></td>
+                <td>star</td>
+                <td>15%</td>
                 <td>
-                  <button class="accept">قبول</button>
-                  <button class="decline">رفض</button>
+                  <button class="accept">تعديل</button>
                 </td>
               </tr>
             </tbody>
@@ -170,7 +163,7 @@
           initComplete: function () {
             var column1 = this.api().column(1);
             var select1 = $(
-              '<select><option value="" >التاريخ</option></select>'
+              '<select><option value="" >الخدمة</option></select>'
             ).on("change", function () {
               var val1 = $.fn.dataTable.util.escapeRegex($(this).val());
 
@@ -184,9 +177,9 @@
               .each(function (d, j) {
                 select1.append('<option value="' + d + '">' + d + "</option>");
               });
-            var column2 = this.api().column(4);
+            var column2 = this.api().column(2);
             var select2 = $(
-              '<select><option value="" >الخدمة</option></select>'
+              '<select><option value="" >التقييم</option></select>'
             ).on("change", function () {
               var val2 = $.fn.dataTable.util.escapeRegex($(this).val());
 

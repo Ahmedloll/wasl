@@ -9,17 +9,12 @@
       href="css/main.css
   "
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
-    />
   </head>
   <body>
     <header class="flex space-between align padding">
       <div>
         <img src="" alt="logo" />
-        <img src="./imgs/open-menu-16@2x.png" alt="menu" />
+        <img id="menu" src="./imgs/open-menu-16@2x.png" alt="menu" />
       </div>
       <div class="search">
         <img src="" alt="" />
@@ -32,7 +27,7 @@
         <ul>
           <li class="active">
             <a href="index.html"
-              ><img src="imgs/home-17@2x.png" alt="home page" />الرئيسية</a
+              ><img src="imgs/team@2x.png" alt="home page" />الرئيسية</a
             >
           </li>
           <li>
@@ -42,68 +37,382 @@
             >
           </li>
           <li>
-            <a href=""
+            <a href="consultant-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
               الاستشارة</a
             >
           </li>
+          <li></li>
           <li>
-            <a href=""
+            <a href="documentation-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات التوثيق</a
             >
           </li>
           <li>
-            <a href=""
+            <a href="maazoon-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات المأذون</a
             >
           </li>
           <li>
-            <a href=""
+            <a href="lawer-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
               المحاماه</a
             >
           </li>
           <li>
-            <a href=""
+            <a href="membership-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات
               العضويات</a
             >
           </li>
           <li>
-            <a href=""
+            <a href="ratings.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />التقييمات</a
             >
           </li>
           <li>
-            <a href=""
-              ><img src="imgs/home-17@2x.png" alt="home page" />الشاكوي</a
+            <a href="complaints.html"
+              ><img src="imgs/home-17@2x.png" alt="home page" />الشكاوى</a
             >
           </li>
           <li>
-            <a href=""
+            <a href="tech-support-request.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />طلبات الدعم
               الفني</a
             >
           </li>
           <li>
-            <a href=""
+            <a href="commision.html"
               ><img src="imgs/home-17@2x.png" alt="home page" />العمولة</a
             >
           </li>
         </ul>
       </nav>
-      <div>
-        <h1>hello world</h1>
+      <div class="content">
+        <h1>الرئيسية</h1>
+        <div class="flex space-between statistics">
+          <div class="flex space-between align statistic-card">
+            <div>
+              <span>1025</span>
+              <p>خدمة المستشار</p>
+            </div>
+            <img src="imgs/meeting@2x.png" alt="" />
+          </div>
+          <div class="flex space-between align statistic-card">
+            <div>
+              <span>1025</span>
+              <p>خدمة المستشار</p>
+            </div>
+            <img src="imgs/meeting@2x.png" alt="" />
+          </div>
+          <div class="flex space-between align statistic-card">
+            <div>
+              <span>1025</span>
+              <p>خدمة المستشار</p>
+            </div>
+            <img src="imgs/meeting@2x.png" alt="" />
+          </div>
+          <div class="flex space-between align statistic-card">
+            <div>
+              <span>1025</span>
+              <p>خدمة المستشار</p>
+            </div>
+            <img src="imgs/meeting@2x.png" alt="" />
+          </div>
+        </div>
+        <div class="flex space-between charts">
+          <div class="doughnut">
+            <h2>احصائيات</h2>
+            <canvas id="myChart"></canvas>
+            <p>احصائيات المستخدمين</p>
+            <span>178.00$</span>
+          </div>
+          <div class="line">
+            <canvas id="myChart2"></canvas>
+          </div>
+        </div>
+        <div class="flex space-between wrap tables">
+          <div class="table">
+            <table>
+              <caption>
+                أكثر المستشارين شيوعا
+              </caption>
+              <thead>
+                <tr>
+                  <th>الاسم</th>
+                  <th>عدد المستخدمين</th>
+                  <th>التقييم</th>
+                  <th>المكسب</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table">
+            <table>
+              <caption>
+                أكثر الموثقين شيوعا
+              </caption>
+              <thead>
+                <tr>
+                  <th>الاسم</th>
+                  <th>عدد المستخدمين</th>
+                  <th>التقييم</th>
+                  <th>المكسب</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table">
+            <table>
+              <caption>
+                أكثر المحامين شيوعا
+              </caption>
+              <thead>
+                <tr>
+                  <th>الاسم</th>
+                  <th>عدد المستخدمين</th>
+                  <th>التقييم</th>
+                  <th>المكسب</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table">
+            <table>
+              <caption>
+                أكثر مأذون شرعي شيوعا
+              </caption>
+              <thead>
+                <tr>
+                  <th>الاسم</th>
+                  <th>عدد المستخدمين</th>
+                  <th>التقييم</th>
+                  <th>المكسب</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+                <tr>
+                  <td>شروق أشرف</td>
+                  <td>9</td>
+                  <td>star</td>
+                  <td>500$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </main>
 
-    <footer class="flex space-between align padding">
-      <ul class="flex">
+    <footer class="flex space-between wrap align padding">
+      <ul class="flex wrap">
         <li><a href="">من نحن</a></li>
         <li><a href="">المساعدة</a></li>
         <li><a href="">اتصل بنا</a></li>
       </ul>
       <p>جميع الحقوق محفوظة - وصل</p>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Red", "Blue", "Yellow"],
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [300, 50, 100],
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
+              ],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            datalabels: {
+              display: false,
+            },
+          },
+          // Core options
+          cutoutPercentage: 70,
+          legend: {
+            display: false,
+          },
+        },
+      });
+      // second chart
+      var ctx2 = document.getElementById("myChart2").getContext("2d");
+      var myChart = new Chart(ctx2, {
+        type: "line",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Blue", "Blue", "Blue", "Blue"],
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [65, 59, 80, 81, 56, 55, 40],
+              fill: true,
+              borderColor: "rgb(75, 192, 192)",
+              backgroundColor: "rgba(75, 192, 192,0.5",
+              tension: 0.1,
+              borderWidth: 0.5,
+            },
+            {
+              label: "My Second Dataset",
+              data: [44, 50, 60, 8, 56, 55, 40],
+              fill: true,
+              borderColor: "rgb(75, 102, 192)",
+              backgroundColor: "rgba(75, 102, 192,0.5",
+              tension: 0.1,
+              borderWidth: 0.5,
+              pointBorderWidth: 0.005,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          plugins: {
+            datalabels: {
+              display: false,
+            },
+          },
+          legend: {
+            display: false,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

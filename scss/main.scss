@@ -66,6 +66,9 @@ p {
 
 .padding {
   padding: 0 12%;
+  @media (max-width: 960px) {
+    padding: 0 6%;
+  }
 }
 .padding-top-100 {
   padding-top: 100px;
@@ -110,6 +113,15 @@ p {
 header {
   background-color: $darkblue;
   height: 100px;
+  span {
+    display: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    @media (max-width: 840px) {
+      display: initial;
+    }
+  }
   nav {
     li {
       margin-left: 20px;
@@ -120,8 +132,39 @@ header {
         }
       }
     }
-  }
 
+    @media (max-width: 840px) {
+      position: absolute;
+      width: 40%;
+      padding: 20px;
+      top: 84px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 3px;
+      right: 0;
+      display: none;
+      z-index: 5;
+      ul {
+        flex-direction: column;
+        
+        li {
+          border-bottom: 1px solid $lightgrey;
+          padding: 10px;
+          a {
+            color: $darkblue;
+          }
+        }
+      }
+    }
+    @media (max-width: 410px) {
+      width: 80%;
+    }
+    &.appear {
+      @media (max-width: 960px) {
+        display: initial;
+      }
+    }
+  }
 }
 main {
   .banner {
@@ -251,7 +294,7 @@ main {
           width: 40%;
           padding: 5%;
         }
-        &:nth-child(even){
+        &:nth-child(even) {
           flex-direction: row-reverse;
         }
       }
@@ -268,12 +311,11 @@ footer {
     padding-bottom: 50px;
     background-color: $darkblue;
     color: white;
-    .main-list{
-      li{
+    .main-list {
+      li {
         direction: ltr;
         margin-bottom: 15px;
       }
-
     }
     .title {
       margin-bottom: 20px;
@@ -284,7 +326,7 @@ footer {
       p {
         margin: 0;
       }
-      .title{
+      .title {
         margin-top: 10px;
       }
       .app {

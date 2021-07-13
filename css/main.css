@@ -49,6 +49,9 @@ p {
 
 .padding {
   padding: 0 12%; }
+  @media (max-width: 960px) {
+    .padding {
+      padding: 0 6%; } }
 
 .padding-top-100 {
   padding-top: 100px; }
@@ -80,12 +83,45 @@ p {
 header {
   background-color: #305069;
   height: 100px; }
+  header span {
+    display: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer; }
+    @media (max-width: 840px) {
+      header span {
+        display: initial; } }
   header nav li {
     margin-left: 20px; }
     header nav li a {
       color: white; }
       header nav li a:hover {
         color: #50e243; }
+  @media (max-width: 840px) {
+    header nav {
+      position: absolute;
+      width: 40%;
+      padding: 20px;
+      top: 84px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 3px;
+      right: 0;
+      display: none;
+      z-index: 5; }
+      header nav ul {
+        flex-direction: column; }
+        header nav ul li {
+          border-bottom: 1px solid #efefef;
+          padding: 10px; }
+          header nav ul li a {
+            color: #305069; } }
+  @media (max-width: 410px) {
+    header nav {
+      width: 80%; } }
+  @media (max-width: 960px) {
+    header nav.appear {
+      display: initial; } }
 
 main .banner {
   color: white;
