@@ -9,9 +9,9 @@ $writing-grey: #707070;
 $link-hover: #50e243;
 
 @font-face {
-  font-family: "Almarai";
-  src: url("../fonts/Almarai-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "cairo";
+  src: url("../fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: lighter;
 }
 @font-face {
   font-family: "Andalus";
@@ -20,13 +20,16 @@ $link-hover: #50e243;
 }
 
 * {
-  font-family: Almarai, sans-serif;
+  font-family: cairo, sans-serif;
 }
 * {
   direction: rtl;
   &:hover {
     transition: all 0.5s;
   }
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -42,6 +45,8 @@ a {
 }
 p {
   color: $writing-grey;
+  line-height: 20px;
+
 }
 
 // flex classes
@@ -171,6 +176,7 @@ main {
     color: white;
     background-color: #305069;
     padding-bottom: 100px;
+
     .container {
       width: 50%;
       margin: 0 auto;
@@ -186,7 +192,6 @@ main {
         font-size: 24px;
         margin: 0 100px;
         font-weight: 100;
-        transition: all 2s;
         @media (max-width: 700px) {
           font-size: 20px;
           margin: 0 60px;
@@ -232,7 +237,6 @@ main {
         @media (max-width: 600px) {
           font-size: 14px;
           padding: 15px 50px;
-
         }
       }
       .border {
@@ -246,9 +250,16 @@ main {
   .about-us {
     img {
       width: 40%;
+      @media (max-width: 725px) {
+        width: 60%;
+        margin: 20px auto 70px;
+      }
     }
     .left-sec {
       width: 50%;
+      @media (max-width: 725px) {
+        width: 100%;
+      }
       p {
         line-height: 30px;
       }
@@ -257,11 +268,23 @@ main {
   .services {
     .services-container {
       .service {
-        width: 25vw;
-        height: 25vw;
+        width: calc(25vw - 7px);
+        height: calc(25vw - 8px);
         position: relative;
         border: 1px solid $lightgrey;
         margin-top: 80px;
+        @media (max-width: 950px) {
+          width: calc(50vw - 11px);
+          height: calc(50vw - 11px);
+        }
+        @media (max-width: 520px) {
+          width: calc(100vw);
+          height: calc(100vw);
+        }
+        @media (max-width: 270px) {
+          height: calc(110vw);
+          border: none;
+        }
         img.main {
           height: 100%;
           width: 100%;
@@ -305,6 +328,13 @@ main {
         span {
           font-size: 30px;
         }
+        @media (max-width: 700px) {
+          width: 46%;
+          margin-bottom: 40px;
+        }
+        @media (max-width: 400px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -320,14 +350,26 @@ main {
         img {
           width: 50%;
           height: 100%;
+          @media (max-width: 870px) {
+            width: 100%;
+
+            height: 50%;
+          }
         }
         .content {
           background-color: white;
           width: 40%;
-          padding: 5%;
+          padding: 0 5%;
+          @media (max-width: 870px) {
+            width: 100%;
+            height: 50%;
+          }
         }
         &:nth-child(even) {
           flex-direction: row-reverse;
+        }
+        @media (max-width: 870px) {
+          height: 400px;
         }
       }
     }
@@ -343,6 +385,17 @@ footer {
     padding-bottom: 50px;
     background-color: $darkblue;
     color: white;
+    img.logo {
+      @media (max-width: 750px) {
+        width: 45%;
+      }
+    }
+    .main-list-container {
+      @media (max-width: 750px) {
+        width: 100%;
+        margin: 40px 0;
+      }
+    }
     .main-list {
       li {
         direction: ltr;
@@ -354,7 +407,7 @@ footer {
     }
 
     .apps-container {
-      max-width: 40%;
+      width: 40%;
       p {
         margin: 0;
       }
@@ -369,18 +422,52 @@ footer {
           a {
             img {
               width: 80%;
+              transition: all 0.5s;
+              &:hover {
+                transform: scale(1.2);
+              }
             }
           }
         }
+        @media (max-width: 750px) {
+          margin-top: 40px;
+          width: 60%;
+        }
+        @media (max-width: 550px) {
+          width: 70%;
+        }
+        @media (max-width: 430px) {
+          width: 85%;
+        }
+        @media (max-width: 350px) {
+          width: 100%;
+        }
+      }
+      @media (max-width: 750px) {
+        width: 100%;
       }
     }
   }
   .dark-footer {
-    height: 90px;
+    min-height: 90px;
     background-color: $darkblue;
     color: white;
     font-size: 14px;
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+    }
+    p {
+      @media (max-width: 500px) {
+        margin-bottom: 25px;
+      }
+    }
     ul {
+      li {
+        @media (max-width: 500px) {
+          margin-bottom: 25px;
+          width: 100%;
+        }
+      }
       a {
         color: white;
         margin-right: 20px;

@@ -115,10 +115,14 @@
               <tr>
                 <td>شروق أشرف</td>
                 <td>محامي</td>
-                <td>star</td>
+                <td>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </td>
                 <td>15%</td>
                 <td>
-                  <button class="accept">تعديل</button>
+                  <button class="accept modal-opener">تعديل</button>
                 </td>
               </tr>
             </tbody>
@@ -135,6 +139,35 @@
       </ul>
       <p>جميع الحقوق محفوظة - وصل</p>
     </footer>
+  </footer>
+  <transition name="model">
+    <div class="modal-mask" id="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal commision-modal">
+          <div class="flex space-between align">
+            <h2>نسبة عمولة المحامي شروق أشرف</h2>
+            <img src="imgs/back.png" alt="back icon" id="back" />
+          </div>
+          <div class="flex space-between">
+            <form class="flex col login" action="">
+              <label for="name">نسبة العمولة</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="نسبة العمولة"
+                required
+              />
+    
+              <div class="flex center">
+                <button type="submit">تعديل</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 

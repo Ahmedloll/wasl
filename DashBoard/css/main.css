@@ -36,6 +36,9 @@ a {
 .center {
   justify-content: center; }
 
+.end {
+  justify-content: flex-end; }
+
 .space-between {
   justify-content: space-between; }
 
@@ -44,6 +47,9 @@ a {
 
 .padding {
   padding: 0 2%; }
+
+.fa-star {
+  color: #f6bd22; }
 
 header {
   height: 45px;
@@ -54,9 +60,15 @@ header {
   z-index: 2; }
   header #menu {
     cursor: pointer; }
+    @media (min-width: 1250px) {
+      header #menu {
+        display: none; } }
   header .search input {
     background: none;
     border: none; }
+
+#back {
+  cursor: pointer; }
 
 main {
   padding: 0 0 0 1%;
@@ -84,7 +96,12 @@ main {
       border-bottom: 1px solid #efefef;
       padding: 0 20px; }
       main nav ul li a {
-        width: 100%; }
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 5px 0; }
+        main nav ul li a img {
+          width: 25px; }
       main nav ul li.active {
         background-color: #f2f2f2; }
   main .content {
@@ -118,6 +135,15 @@ main {
           main .content .table-container table td p,
           main .content .table-container table th p {
             white-space: normal; }
+            main .content .table-container table td p.limited,
+            main .content .table-container table th p.limited {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              width: 300px; }
+              main .content .table-container table td p.limited.small-limit,
+              main .content .table-container table th p.limited.small-limit {
+                width: 150px; }
         main .content .table-container table .child ul {
           width: 100%; }
           main .content .table-container table .child ul li {
@@ -132,6 +158,8 @@ main {
         main .content .table-container table .attachment a {
           color: #0dbf66;
           text-decoration: underline; }
+        main .content .table-container table .not-yet {
+          color: red; }
         main .content .table-container table button {
           border: none;
           padding: 0 15px;
@@ -209,10 +237,10 @@ main {
       margin: 30px 0;
       overflow: hidden;
       border: 1px solid #dedede; }
-      @media (max-width: 900px) {
+      @media (max-width: 1100px) {
         main .tables .table {
           width: 49%; } }
-      @media (max-width: 850px) {
+      @media (max-width: 980px) {
         main .tables .table {
           width: 100%; } }
       main .tables .table table {
@@ -243,12 +271,121 @@ main {
         main .tables .table table th {
           text-align: right;
           padding-right: 20px; }
+  main .form-container {
+    min-height: 100vh; }
+    main .form-container form {
+      width: 40%;
+      border-radius: 3px;
+      padding: 2.5%; }
+      main .form-container form input {
+        border: 1px solid #d8d8d8;
+        border-radius: 3px;
+        margin-bottom: 20px; }
+      main .form-container form a {
+        color: #ee1717;
+        font-weight: bold; }
+      main .form-container form button {
+        border: none;
+        padding: 0 40px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #305069;
+        border: 1px solid #305069; }
 
 footer {
   min-height: 45px;
   background-color: #efefef; }
   footer li {
     padding-left: 15px; }
+
+.modal-mask {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  display: none;
+  transition: opacity 0.3s ease; }
+  .modal-mask .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle; }
+    .modal-mask .modal-wrapper .modal {
+      background-color: white;
+      width: 80%;
+      margin: auto;
+      border-radius: 5px;
+      padding: 40px 10%;
+      box-shadow: 0px 0px 5px 2px lightgrey; }
+      .modal-mask .modal-wrapper .modal #back {
+        cursor: pointer; }
+      .modal-mask .modal-wrapper .modal li .title {
+        font-weight: bold; }
+      .modal-mask .modal-wrapper .modal li .data.green {
+        color: #09d501; }
+      .modal-mask .modal-wrapper .modal li .data.bold {
+        font-weight: bold; }
+      .modal-mask .modal-wrapper .modal p {
+        color: #aaa; }
+      .modal-mask .modal-wrapper .modal .right-sec {
+        width: 48%; }
+        @media (max-width: 950px) {
+          .modal-mask .modal-wrapper .modal .right-sec {
+            width: 100%; } }
+      .modal-mask .modal-wrapper .modal .left-sec {
+        width: 48%; }
+        @media (max-width: 950px) {
+          .modal-mask .modal-wrapper .modal .left-sec {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; } }
+        @media (max-width: 750px) {
+          .modal-mask .modal-wrapper .modal .left-sec {
+            flex-direction: column; } }
+        .modal-mask .modal-wrapper .modal .left-sec h3 {
+          margin-top: 0; }
+        .modal-mask .modal-wrapper .modal .left-sec .address {
+          width: 50%; }
+          @media (max-width: 750px) {
+            .modal-mask .modal-wrapper .modal .left-sec .address {
+              width: 100%; } }
+        .modal-mask .modal-wrapper .modal .left-sec #map {
+          width: 100%;
+          height: 300px; }
+          @media (max-width: 950px) {
+            .modal-mask .modal-wrapper .modal .left-sec #map {
+              width: 45%; } }
+          @media (max-width: 750px) {
+            .modal-mask .modal-wrapper .modal .left-sec #map {
+              width: 100%; } }
+      .modal-mask .modal-wrapper .modal .service-provider {
+        border-top: 1px solid #efefef;
+        margin-top: 30px; }
+        .modal-mask .modal-wrapper .modal .service-provider ul {
+          columns: 2; }
+          @media (max-width: 580px) {
+            .modal-mask .modal-wrapper .modal .service-provider ul {
+              columns: 1; } }
+      .modal-mask .modal-wrapper .modal.commision-modal {
+        width: 40%; }
+        .modal-mask .modal-wrapper .modal.commision-modal form {
+          width: 100%;
+          border-radius: 3px; }
+          .modal-mask .modal-wrapper .modal.commision-modal form input {
+            border: 1px solid #d8d8d8;
+            border-radius: 3px;
+            margin-bottom: 20px; }
+          .modal-mask .modal-wrapper .modal.commision-modal form button {
+            border: none;
+            padding: 0 40px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #305069;
+            border: 1px solid #305069; }
 
 .appear {
   display: initial;

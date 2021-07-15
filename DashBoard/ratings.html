@@ -11,6 +11,12 @@
     />
     <link
       rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
       href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
     />
@@ -117,18 +123,21 @@
                 <td>August 05 2020 10:29pm</td>
                 <td>شروق أشرف</td>
                 <td>محامي</td>
-                <td>star</td>
                 <td>
-                  <!-- <p>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </td>
+                <td>
+                  <p class="limited">
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
                     توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
                     هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
                     الحروف التى يولدها التطبيق.
-                  </p> -->
-                  <p>هذا النص هو مثال لنص يمكن</p>
+                  </p>
                 </td>
                 <td>
-                  <button class="accept">التفاصيل</button>
+                  <button class="accept modal-opener">التفاصيل</button>
                 </td>
               </tr>
             </tbody>
@@ -145,6 +154,54 @@
       </ul>
       <p>جميع الحقوق محفوظة - وصل</p>
     </footer>
+
+    <transition name="model">
+      <div class="modal-mask" id="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal">
+            <div class="flex space-between align">
+              <h2>التعليق رقم #1236587</h2>
+              <img src="imgs/back.png" alt="back icon" id="back" />
+            </div>
+            <div class="flex space-between">
+              <div class="right-sec">
+                <ul>
+                  <li>
+                    <span class="title">التاريخ : </span
+                    ><span class="data">7 sep 2020, 2:30 AM</span>
+                  </li>
+                  <li>
+                    <span class="title">نوع الخدمة : </span
+                    ><span class="data">سداد التزامات مالية</span>
+                  </li>
+                  <li>
+                    <span class="title">اسم المستخدم : </span
+                    ><span class="data">شروق أشرف</span>
+                  </li>
+                  <li>
+                    <span class="title">التقييم : </span
+                    ><span class="data"
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i
+                    ></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="left-sec">
+                <h3>التعليق</h3>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                  التى يولدها التطبيق.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 

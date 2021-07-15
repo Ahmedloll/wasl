@@ -1,7 +1,7 @@
 // toogle side menu
 document.getElementById("menu").addEventListener("click", showSideMenu);
 function showSideMenu() {
-  let disply = document.querySelector("nav ").classList.contains("appear");
+  let disply = document.querySelector("nav").classList.contains("appear");
   if (!disply) {
     document.querySelector("nav").classList.add("appear");
   } else {

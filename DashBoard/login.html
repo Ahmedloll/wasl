@@ -4,21 +4,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wasl || Login</title>
+    <link
+      rel="stylesheet"
+      href="css/main.css
+"
+    />
   </head>
   <body>
-    <form class="flex col" action="">
-      <div>
-        <h1>تسجيل الدخول</h1>
-        <div>back</div>
+    <main>
+      <div class="flex center align form-container">
+        <form class="flex col login" action="">
+          <div class="flex space-between align">
+            <h1>تسجيل الدخول</h1>
+            <img id="back" src="imgs/back.png" alt="" />
+          </div>
+          <label for="name">اسم المستخدم</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="اسم المستخدم"
+            required
+          />
+          <label for="password">كلمة المرور</label>
+          <input
+            type="password"
+            name="name"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <div class="flex space-between">
+            <a href="resetpassword.html">نسيت كلمة المرور ؟</a>
+            <button type="submit">دخول</button>
+          </div>
+        </form>
       </div>
-      <label for="name">اسم المستخدم</label>
-      <input type="text" name="name" id="name" placeholder="اسم المستخدم" required />
-      <label for="password">كلمة المرور</label>
-      <input type="password" name="name" id="password"  required />
-      <div>
-        <a href="">نسيت كلمة المرور ؟</a>
-        <button type="submit">دخول</button>
-      </div>
-    </form>
+    </main>
   </body>
 </html>

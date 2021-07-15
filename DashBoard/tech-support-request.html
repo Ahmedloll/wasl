@@ -112,6 +112,7 @@
                 <th>اسم المستخدم</th>
                 <th>عنوان الرسالة</th>
                 <th>الرسالة</th>
+                <th>اجراء</th>
               </tr>
             </thead>
             <tbody>
@@ -119,22 +120,20 @@
                 <td>August 05 2020 10:29pm</td>
                 <td>شروق أشرف</td>
                 <td>
-                  <!-- <p>
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
-                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
-                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                    الحروف التى يولدها التطبيق.
-                  </p> -->
-                  <p>هذا النص هو مثال لنص يمكن</p>
+                  <p class="limited small-limit">
+                    هذا النص هو مثال لنص يمكن أن يست
+                  </p>
                 </td>
                 <td>
-                  <!-- <p>
+                  <p class="limited">
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
                     توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
                     هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
                     الحروف التى يولدها التطبيق.
-                  </p> -->
-                  <p>هذا النص هو مثال لنص يمكن</p>
+                  </p>
+                </td>
+                <td>
+                  <button class="accept modal-opener">التفاصيل</button>
                 </td>
               </tr>
             </tbody>
@@ -151,6 +150,45 @@
       </ul>
       <p>جميع الحقوق محفوظة - وصل</p>
     </footer>
+    <transition name="model">
+      <div class="modal-mask" id="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal">
+            <div class="flex space-between align">
+              <h2>شكوى رقم #1236587</h2>
+              <img src="imgs/back.png" alt="back icon" id="back" />
+            </div>
+            <div class="flex space-between">
+              <div class="right-sec">
+                <ul>
+                  <li>
+                    <span class="title">تاريخ الطلب : </span
+                    ><span class="data">7 sep 2020, 2:30 AM</span>
+                  </li>
+                  <li>
+                    <span class="title">اسم المستخدم : </span
+                    ><span class="data">شروق أشرف</span>
+                  </li>
+                  <li>
+                    <span class="title">عنوان الرسالة : </span
+                    ><span class="data">عنوان الرسالة</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="left-sec">
+                <h3>الرسالة</h3>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                  التى يولدها التطبيق.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 

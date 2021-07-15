@@ -11,6 +11,12 @@
     />
     <link
       rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
       href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
     />
@@ -126,9 +132,13 @@
                 <td>سداد التزامات مالية</td>
                 <td>في مقر العميل</td>
                 <td class="attachment"><a href="">doc1</a></td>
-                <td>star</td>
                 <td>
-                  <button class="accept">التفاصيل</button>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </td>
+                <td>
+                  <button class="accept modal-opener">التفاصيل</button>
                 </td>
               </tr>
             </tbody>
@@ -145,6 +155,115 @@
       </ul>
       <p>جميع الحقوق محفوظة - وصل</p>
     </footer>
+
+    <transition name="model">
+      <div class="modal-mask" id="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal">
+            <div class="flex space-between align">
+              <h2>طلب محاماة رقم #1236587</h2>
+              <img src="imgs/back.png" alt="back icon" id="back" />
+            </div>
+            <div class="flex space-between">
+              <div class="right-sec">
+                <ul>
+                  <li>
+                    <span class="title">تاريخ الطلب : </span
+                    ><span class="data">7 sep 2020, 2:30 AM</span>
+                  </li>
+                  <li>
+                    <span class="title">نوع الخدمة : </span
+                    ><span class="data">اعداد و صياغة العقود</span>
+                  </li>
+                  <li>
+                    <span class="title">حالة القضية : </span
+                    ><span class="data">قائمة</span>
+                  </li>
+                  <li>
+                    <span class="title">اسم المستخدم : </span
+                    ><span class="data">شروق أشرف</span>
+                  </li>
+                  <li>
+                    <span class="title">اسم المحكمة القائم فيها القضية : </span
+                    ><span class="data">اسم المحكمة</span>
+                  </li>
+                  <li>
+                    <span class="title">موضوع القضية : </span
+                    ><span class="data">الموضوع</span>
+                  </li>
+                  <li>
+                    <span class="title">الحالة : </span
+                    ><span class="data green">تمت</span>
+                  </li>
+                  <li>
+                    <span class="title">المبلغ المدفوع : </span
+                    ><span class="data bold">160.00$</span>
+                  </li>
+
+                  <li>
+                    <span class="title">ملحقات : </span>
+                    <span class="data">ساعة</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="left-sec">
+                <h3>نص الطلب</h3>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                  التى يولدها التطبيق.
+                </p>
+                <h3>مقر اقامة الخصم</h3>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                </p>
+              </div>
+            </div>
+            <div class="service-provider">
+              <h2>اسم المستشار : أحمد علاء</h2>
+              <ul>
+                <li>
+                  <span class="title">التقييم : </span
+                  ><span class="data"
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i
+                  ></span>
+                </li>
+                <li>
+                  <span class="title">مجالات خبراته : </span
+                  ><span class="data">منسدلة</span>
+                </li>
+                <li>
+                  <span class="title">السعر : </span
+                  ><span class="data">500</span>
+                </li>
+                <li>
+                  <span class="title">عدد الاستشارات المنجزة : </span
+                  ><span class="data">4</span>
+                </li>
+                <li>
+                  <span class="title">سنوات خبرته : </span
+                  ><span class="data">14</span>
+                </li>
+                <li>
+                  <span class="title">نظام الحساب : </span
+                  ><span class="data">مبلغ محدد</span>
+                </li>
+              </ul>
+              <h3>ملاحظات المحامي</h3>
+              <p>
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
+                العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                التطبيق.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 

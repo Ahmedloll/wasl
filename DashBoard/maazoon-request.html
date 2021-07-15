@@ -11,6 +11,12 @@
     />
     <link
       rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
       href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
     />
@@ -122,9 +128,13 @@
                 <td>August 05 2020 10:29pm</td>
                 <td>شروق أشرف</td>
                 <td>August 05 2020 10:29pm</td>
-                <td>star</td>
                 <td>
-                  <button class="accept">التفاصيل</button>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </td>
+                <td>
+                  <button class="accept modal-opener">التفاصيل</button>
                 </td>
               </tr>
             </tbody>
@@ -141,9 +151,126 @@
       </ul>
       <p>جميع الحقوق محفوظة - وصل</p>
     </footer>
-    <script src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
+    <transition name="model">
+      <div class="modal-mask" id="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal">
+            <div class="flex space-between align">
+              <h2>طلب مأذون رقم #1236587</h2>
+              <img src="imgs/back.png" alt="back icon" id="back" />
+            </div>
+            <div class="flex space-between wrap">
+              <div class="right-sec">
+                <ul>
+                  <li>
+                    <span class="title">تاريخ الطلب : </span
+                    ><span class="data">7 sep 2020, 2:30 AM</span>
+                  </li>
+                  <li>
+                    <span class="title">اسم المستخدم : </span
+                    ><span class="data">شروق أشرف</span>
+                  </li>
+                  <li>
+                    <span class="title">طريقة الدفع : </span
+                    ><span class="data">البطاقة الإتمانية</span>
+                  </li>
+                  <li>
+                    <span class="title">الحالة : </span
+                    ><span class="data green">تمت</span>
+                  </li>
+                  <li>
+                    <span class="title">المبلغ المطلوب : </span
+                    ><span class="data bold">160.00$</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="left-sec">
+                <div class="address">
+                  <h3>العنوان</h3>
+                  <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p>
+                </div>
+
+                <div id="map"></div>
+              </div>
+            </div>
+            <div class="service-provider">
+              <h2>اسم المستشار : أحمد علاء</h2>
+              <ul>
+                <li>
+                  <span class="title">التقييم : </span
+                  ><span class="data"
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i
+                  ></span>
+                </li>
+                <li>
+                  <span class="title">مجالات خبراته : </span
+                  ><span class="data">منسدلة</span>
+                </li>
+                <li>
+                  <span class="title">السعر : </span
+                  ><span class="data">500</span>
+                </li>
+                <li>
+                  <span class="title">عدد الاستشارات المنجزة : </span
+                  ><span class="data">4</span>
+                </li>
+                <li>
+                  <span class="title">سنوات خبرته : </span
+                  ><span class="data">14</span>
+                </li>
+                <li>
+                  <span class="title">نظام الحساب : </span
+                  ><span class="data">مبلغ محدد</span>
+                </li>
+              </ul>
+              <h3>ملاحظات المأذون</h3>
+              <p>
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
+                العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                التطبيق.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+
+    <script src="js/main.js"></script>
+    <!-- map integration -->
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 31.20105849085697, lng: 29.899095187200032 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+    put your key
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=KEY HERE =initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+    <!-- datatable -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script
       type="text/javascript"
       charset="utf8"
