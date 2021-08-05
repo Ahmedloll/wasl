@@ -13,6 +13,13 @@ body {
   margin: 0;
   padding: 0; }
 
+.sign {
+  background: url("../imgs/c9e82dbbdfb949282d5097efa6b4d487.png");
+  background-position: bottom;
+  background-size: cover;
+  background-color: rgba(48, 80, 105, 0.5);
+  background-blend-mode: soft-light; }
+
 ul {
   list-style: none;
   margin: 0;
@@ -57,15 +64,39 @@ header {
   position: fixed;
   top: 0;
   width: 96%;
-  z-index: 2; }
+  z-index: 2;
+  align-items: center;
+  flex-wrap: wrap; }
+  header .logo-wrapper img[alt="logo"] {
+    height: 85%;
+    margin-left: 10vw; }
+    @media (max-width: 360px) {
+      header .logo-wrapper img[alt="logo"] {
+        height: 40%; } }
   header #menu {
     cursor: pointer; }
     @media (min-width: 1250px) {
       header #menu {
         display: none; } }
-  header .search input {
-    background: none;
-    border: none; }
+  header .search {
+    display: flex;
+    align-items: center; }
+    header .search button {
+      background: none;
+      border: none;
+      cursor: pointer; }
+    header .search input {
+      background: none;
+      border: none; }
+    @media (max-width: 360px) {
+      header .search {
+        width: 100%; } }
+  @media (min-width: 1250px) {
+    header {
+      display: none; } }
+  @media (max-width: 360px) {
+    header {
+      height: 100px; } }
 
 #back {
   cursor: pointer; }
@@ -101,7 +132,8 @@ main {
         align-items: center;
         padding: 5px 0; }
         main nav ul li a img {
-          width: 25px; }
+          width: 25px;
+          margin-left: 4px; }
       main nav ul li.active {
         background-color: #f2f2f2; }
   main .content {
@@ -199,6 +231,8 @@ main {
     border-radius: 12px; }
     main .statistics .statistic-card p {
       margin-bottom: 0; }
+    main .statistics .statistic-card img {
+      width: 25%; }
     @media (max-width: 830px) {
       main .statistics .statistic-card {
         width: 44%;
@@ -276,7 +310,8 @@ main {
     main .form-container form {
       width: 40%;
       border-radius: 3px;
-      padding: 2.5%; }
+      padding: 2.5%;
+      background-color: white; }
       main .form-container form input {
         border: 1px solid #d8d8d8;
         border-radius: 3px;
@@ -324,6 +359,8 @@ footer {
         cursor: pointer; }
       .modal-mask .modal-wrapper .modal li .title {
         font-weight: bold; }
+      .modal-mask .modal-wrapper .modal li .data img {
+        width: 13%; }
       .modal-mask .modal-wrapper .modal li .data.green {
         color: #09d501; }
       .modal-mask .modal-wrapper .modal li .data.bold {
